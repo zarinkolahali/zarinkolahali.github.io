@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
+
+body {
+    background-color: #2e3440;
+    color: #d8dee9;
+    font-family: 'Vazirmatn', 'Roboto Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.terminal-window {
+    background-color: #3b4252;
+    border: 1px solid #4c566a;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    overflow: hidden;
+    direction: ltr;
+}
+
+.terminal-header {
+    background-color: #434c5e;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+}
+
+.buttons { display: flex; }
+.buttons span { height: 12px; width: 12px; border-radius: 50%; margin-right: 8px; }
+.close { background-color: #bf616a; }
+.minimize { background-color: #ebcb8b; }
+.maximize { background-color: #a3be8c; }
+
+.title {
+    color: #eceff4;
+    font-size: 14px;
+    flex-grow: 1;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.terminal-body { padding: 20px; font-size: 16px; line-height: 1.6; min-height: 300px; }
+.prompt-line { font-family: 'Roboto Mono', monospace; margin-bottom: 15px; }
+.prompt-user { color: #a3be8c; font-weight: bold; }
+.prompt-symbol { color: #81a1c1; margin: 0 5px; }
+.prompt-command { color: #e5e9f0; }
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    direction: rtl;
+}
+
+.profile-icon {
+    font-size: 48px;
+    color: #eceff4;
+    margin-left: 20px;
+}
+
+#name { color: #88c0d0; margin: 0; font-size: 28px; font-weight: 700; }
+#bio { margin-bottom: 30px; direction: rtl; text-align: right; min-height: 50px; }
+
+.section-title {
+    color: #ebcb8b;
+    font-size: 16px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: normal;
+    direction: rtl;
+    text-align: right;
+}
+.section-title span { margin-left: 5px; }
+
+.links-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+
+/*
+ > >> این بخش، مسئول راست‌چین کردن آیکون‌هاست <<<         *
+ */
+.link-tile {
+    background-color: #434c5e;
+    color: #d8dee9;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    font-size: 14px;
+    border-right: 3px solid #5e81ac; /* خط رنگی در سمت راست */
+    border-left: none;
+    direction: rtl; /* چیدمان از راست به چپ */
+}
+
+.link-tile:hover { background-color: #4c566a; transform: translateY(-3px); }
+
+.link-tile i {
+    margin-left: 10px; /* ایجاد فاصله در سمت چپ آیکون */
+    margin-right: 0;
+    font-size: 18px;
+    width: 20px;
+    text-align: center;
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    height: 18px;
+    background-color: #eceff4;
+    animation: blink 1s steps(2, start) infinite;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* @keyframes blink { to { background-color: transparent; } } */
